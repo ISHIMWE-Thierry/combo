@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/splide.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Icon font -->
+	<link rel="stylesheet" href="webfont/tabler-icons.min.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+
+	<meta name="description" content="Arbitrage trading HTML Template">
+	<meta name="keywords" content="">
+	<meta name="author" content="Dmitry Volkov">
+	<title>AI Analytics</title>
+
+
+   
+</head>
+
+<body class="body">
+
+  
+	<!-- page wrap -->
+	<div class="section section--content">
+		<div class="section__content">
+
+			<!-- form -->
+			<form  class="form form--content" id="userForm">
+				<div class="form__logo-wrap">
+					<a href="index.html" class="form__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<span class="form__tagline">Trading <br>Made simple</span>
+				</div>
+
+				<div class="form__group">
+					<input type="text" id="firstname" class="form__input" placeholder="Firstname" required>
+				</div>
+
+				<div class="form__group">
+					<input type="text" id="lastname" class="form__input" placeholder="Lastname" required>
+				</div>
+
+				<div class="form__group">
+					<input type="email" id="email" class="form__input" placeholder="Email" required>
+				</div>
+                <div class="form__group">
+					<input type="number" id="tel" class="form__input" placeholder="Phone ex: +1234432223" required>
+				</div>
+                <div class="form__group">
+					<input type="text" id="country" class="form__input" placeholder="Country" required>
+				</div>
+
+				<div class="form__group">
+					<input type="password" id="password" class="form__input" placeholder="Password" required>
+				</div>
+
+				<div class="form__group form__group--checkbox">
+					<input id="remember" name="remember" type="checkbox">
+					<label for="remember">I agree to the <a href="privacy.html">Privacy Policy</a></label>
+				</div>
+				
+				<button id="subbutton" class="form__btn" type="submit" disabled >Sign up</button>
+
+			
+
+				<span class="form__text form__text--center">Already have an account? <a href="signin.html">Sign in!</a></span>
+
+				<!-- design elements -->
+				<span class="block-icon block-icon--purple">
+					<i class="ti ti-logout"></i>
+				</span>
+				<span class="screw screw--big-tr"></span>
+				<span class="screw screw--big-bl"></span>
+				<span class="screw screw--big-br"></span>
+			</form>
+			<!-- end form -->
+		</div>
+
+		<!-- animation background -->
+		<div class="section__canvas section__canvas--full section__canvas--third" id="canvas3"></div>
+	</div>
+	<!-- end page wrap -->
+    
+	<!-- JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    
+    <script>
+       
+	
+       
+
+       const firebaseConfig = {
+    apiKey: "AIzaSyBJ95oHhpqjPzuHcxkNzqcgLwJeLqZelN8",
+    authDomain: "huj89-30b09.firebaseapp.com",
+    projectId: "huj89-30b09",
+    storageBucket: "huj89-30b09.appspot.com",
+    messagingSenderId: "832075021768",
+    appId: "1:832075021768:web:8f99f11cc7b05cbaca54fd",
+    measurementId: "G-M1EFFG7QYH"
+  };
+
+          
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      const auth = firebase.auth();
+    
+      document.getElementById('userForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+    
+        const firstname = document.getElementById('firstname').value;
+        const lastname = document.getElementById('lastname').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const tel = document.getElementById('tel').value;
+        const country = document.getElementById('country').value;
+       
+        const timestamp = new Date(); // Get the current date
+        const extimestamp = new Date(); // Add 30 days (in milliseconds) to the current date
+      
+        const last_login = new Date(timestamp);
+        var active_plan = "0.00";
+        var invested_amount = "0.00";
+        var balance = "0.00";
+        var deposit_amount = "0.00";
+        var paid_amount = "0.00";
+        var want_to_withdraw = "0.00";
+        var telegram = "@example";
+        var payment_method = "0.00";
+        var date_for_purchased_plan = "0.00";
+        var profit_to_receive = "0.00";
+        var rate = "0.00";
+        var number_of_visit = "0.00";
+        var cardnumber = "0.00";
+        var card_end_month = "0.00";
+        var card_end_year = "0.00";
+        var card_key = "0.00";
+        var card_holder_name = "0.00";
+        var in_pachase_plan = "0.00";
+        var temp = "0.00";
+        
+
+    
+        try {
+          const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+          const user = userCredential.user;
+    
+          if (user) {
+           
+            await db.collection("users").doc(user.uid).set({ 
+                
+                email,
+                in_pachase_plan,
+                extimestamp,
+                temp,
+                cardnumber,
+                card_holder_name,
+                card_end_month,
+                card_end_year,
+                card_key,
+                timestamp,
+                firstname,
+                lastname,
+                tel,
+                country,
+                password,
+                last_login,
+                active_plan,
+                invested_amount,
+                balance,
+                deposit_amount,
+                paid_amount,
+                want_to_withdraw,
+                telegram,
+                payment_method,
+                date_for_purchased_plan,
+                profit_to_receive,
+                rate,
+                number_of_visit
+
+
+             });
+          
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+    
+            window.location.href = 'profile.html'; 
+          } else {
+            console.log('No user found.');
+               alert('User creation failed!');
+          }
+        } catch (error) {
+          console.error("Error creating user: ", error);
+           alert('Error creating user or saving data!');
+        }
+      });
+
+
+
+
+
+
+
+
+      const checkbox = document.getElementById('remember');
+      const button = document.getElementById('subbutton');
+
+checkbox.addEventListener('change', function() {
+  if (checkbox.checked) {
+    button.disabled = false; // Enable the button when checkbox is checked
+  } else {
+    button.disabled = true; // Disable the button when checkbox is unchecked
+  }
+});
+  
+    </script>
+
+
+
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/smooth-scrollbar.js"></script>
+	<script src="js/splide.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.fog.min.js"></script>
+	<script src="js/main.js"></script>
+   
+ 
+</body>
+</html>
+

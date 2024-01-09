@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/splide.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Icon font -->
+	<link rel="stylesheet" href="webfont/tabler-icons.min.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+
+	<meta name="description" content="AI analytics trading made simple">
+	<meta name="keywords" content="">
+	<meta name="author" content="Dmitry Volkov">
+	<title>AI analytics – AI analytics trading made simple</title>
+</head>
+
+<body class="body">
+	<!-- page wrap -->
+	<div class="section section--content">
+		<div class="section__content">
+			<!-- form -->
+			<form class="form form--content" id="userForm">
+				<div class="form__logo-wrap">
+					<a href="index.html" class="form__logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<span class="form__tagline">AI analytics <br>trading made simple</span>
+				</div>
+
+				<div class="form__group">
+					<input type="text" id="email" class="form__input" placeholder="Email" required autocomplete="email">
+				</div>
+
+				<div class="form__group">
+					<input type="password" id="password" class="form__input" placeholder="Password" required autocomplete="current-password">
+				</div>
+
+				
+				
+				<button class="form__btn" type="submit">Sign in</button>
+
+				<span class="form__delimiter">or</span>
+
+				
+
+				<span class="form__text form__text--center">Don't have an account? <a href="signup.html">Sign up!</a><br> <a href="forgot.html">Forgot password?</a></span>
+
+				<!-- design elements -->
+				<span class="block-icon block-icon--purple">
+					<i class="ti ti-login"></i>
+				</span>
+				<span class="screw screw--big-tr"></span>
+				<span class="screw screw--big-bl"></span>
+				<span class="screw screw--big-br"></span>
+			</form>
+			<!-- end form -->
+		</div>
+
+		<!-- animation background -->
+		<div class="section__canvas section__canvas--full section__canvas--third" id="canvas3"></div>
+	</div>
+	<!-- end page wrap -->
+
+	<!-- JS -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    
+    <script>
+    
+
+       const firebaseConfig = {
+    apiKey: "AIzaSyBJ95oHhpqjPzuHcxkNzqcgLwJeLqZelN8",
+    authDomain: "huj89-30b09.firebaseapp.com",
+    projectId: "huj89-30b09",
+    storageBucket: "huj89-30b09.appspot.com",
+    messagingSenderId: "832075021768",
+    appId: "1:832075021768:web:8f99f11cc7b05cbaca54fd",
+    measurementId: "G-M1EFFG7QYH"
+  };
+
+          
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      const auth = firebase.auth();
+    
+      document.getElementById('userForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+		const date = new Date(Date.now());
+        const last_login = date;
+    
+    
+        try {
+          const userCredential = await auth.signInWithEmailAndPassword(email, password);
+          const user = userCredential.user;
+    
+          if (user) {
+           
+            await db.collection("users").doc(user.uid).update({ 
+				last_login
+
+             });
+            window.location.href = 'profile.html'; 
+          } else {
+            console.log('No user found.');
+          
+            alert('User creation failed!');
+          }
+        } catch (error) {
+          console.error("Error creating user: ", error);
+         
+          alert('Error sigh in');
+        }
+      });
+
+  
+    </script>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/smooth-scrollbar.js"></script>
+	<script src="js/splide.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.fog.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

